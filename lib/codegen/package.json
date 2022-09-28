@@ -1,5 +1,5 @@
 {
-  "name": "@protobufjs/codegen",
+  "name": "@protobufjs/codegen-nolong",
   "description": "A minimalistic code generation utility.",
   "version": "2.0.4",
   "author": "Daniel Wirtz <dcode+protobufjs@dcode.io>",

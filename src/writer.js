@@ -221,6 +221,7 @@ Writer.prototype.uint32 = function write_uint32(value) {
  * @returns {Writer} `this`
  */
 Writer.prototype.int32 = function write_int32(value) {
+    if (util.isString(value)) value = Number(value);
     return value < 0
         ? this._push(writeVarint64, 10, LongBits.fromNumber(value)) // 10 bytes per spec
         : this.uint32(value);
@@ -232,6 +233,7 @@ Writer.prototype.int32 = function write_int32(value) {
  * @returns {Writer} `this`
  */
 Writer.prototype.sint32 = function write_sint32(value) {
+    if (util.isString(value)) value = Number(value);
     return this.uint32((value << 1 ^ value >> 31) >>> 0);
 };
 
@@ -301,6 +303,7 @@ function writeFixed32(val, buf, pos) {
  * @returns {Writer} `this`
  */
 Writer.prototype.fixed32 = function write_fixed32(value) {
+    if (util.isString(value)) value = Number(value);
     return this._push(writeFixed32, 4, value >>> 0);
 };
 
@@ -339,6 +342,7 @@ Writer.prototype.sfixed64 = Writer.prototype.fixed64;
  * @returns {Writer} `this`
  */
 Writer.prototype.float = function write_float(value) {
+    if (util.isString(value)) value = Number(value);
     return this._push(util.float.writeFloatLE, 4, value);
 };
 
@@ -349,6 +353,7 @@ Writer.prototype.float = function write_float(value) {
  * @returns {Writer} `this`
  */
 Writer.prototype.double = function write_double(value) {
+    if (util.isString(value)) value = Number(value);
     return this._push(util.float.writeDoubleLE, 8, value);
 };
 

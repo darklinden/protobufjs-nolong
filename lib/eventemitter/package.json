@@ -1,5 +1,5 @@
 {
-  "name": "@protobufjs/eventemitter",
+  "name": "@protobufjs/eventemitter-nolong",
   "description": "A minimal event emitter.",
   "version": "1.1.0",
   "author": "Daniel Wirtz <dcode+protobufjs@dcode.io>",

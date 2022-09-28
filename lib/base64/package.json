@@ -1,5 +1,5 @@
 {
-  "name": "@protobufjs/base64",
+  "name": "@protobufjs/base64-nolong",
   "description": "A minimal base64 implementation for number arrays.",
   "version": "1.1.2",
   "author": "Daniel Wirtz <dcode+protobufjs@dcode.io>",

@@ -1,5 +1,5 @@
 {
-  "name": "@protobufjs/aspromise",
+  "name": "@protobufjs/aspromise-nolong",
   "description": "Returns a promise from a node-style callback function.",
   "version": "1.1.2",
   "author": "Daniel Wirtz <dcode+protobufjs@dcode.io>",
